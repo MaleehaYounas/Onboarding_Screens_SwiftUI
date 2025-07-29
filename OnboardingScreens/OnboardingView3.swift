@@ -14,7 +14,6 @@ struct OnboardingView3: View {
                     
                     if isPortrait{
                         VStack(spacing: minDim * 0.07) {
-                            Spacer()
                             // Image
                             ImageView(Dim: minDim)
                             Details(Dim:minDim)

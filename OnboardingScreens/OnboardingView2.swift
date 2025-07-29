@@ -18,16 +18,16 @@ struct OnboardingView2: View {
                     
                     if isPortrait{
                         VStack(spacing: minDim * 0.07) {
-                            Spacer()
                             // Image
                             ImageView(Dim: minDim)
                             Details(Dim:minDim)
-                            Spacer(minLength: minDim * 0.06)
+                            Spacer(minLength: minDim * 0.07)
                         }
                     }
                     else{
                         
                         HStack(spacing: minDim * 0.03) {
+                            Spacer(minLength: minDim * 0.05)
                             // Image
                             ImageView(Dim: minDim)
                             VStack(spacing: minDim * 0.07){
