@@ -8,9 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let data: [ViewData] = Data
+    @State var currentPage:Int = 0
+   
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+          TabView(selection: $currentPage) {
+              ForEach(0..<data.count, id: \.self) { index in
+                  OnboardingCard(data: data[index], currentPage: $currentPage)
+            }
+          }
+          //.tabViewStyle(PageTabViewStyle())
+          .ignoresSafeArea()
+          .tabViewStyle(.page(indexDisplayMode: .never))
+        }
 }
 
 #Preview {
